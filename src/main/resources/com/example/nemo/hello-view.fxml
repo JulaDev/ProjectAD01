@@ -11,6 +11,7 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
 <SplitPane dividerPositions="0.5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" stylesheets="@style/style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.nemo.Controller">
     <items>
@@ -22,7 +23,12 @@
                         <Image url="@Icon/download.png" />
                     </image>
                 </ImageView>
-            <ImageView fitHeight="188.0" fitWidth="283.0" layoutX="317.0" layoutY="-6.0">
+            <ImageView fitHeight="178.0" fitWidth="266.0" layoutX="303.0" layoutY="5.0">
+               <image>
+                  <Image url="@picture/Moon.PNG" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="188.0" fitWidth="270.0" layoutX="330.0" layoutY="4.0">
                <image>
                   <Image url="@picture/IMG_2764.PNG" />
                </image>
@@ -40,7 +46,7 @@
             </children></AnchorPane>
         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="263.0" prefWidth="747.0">
             <children>
-                <ImageView fx:id="browseButton" fitHeight="25.0" fitWidth="25.0" layoutX="541.0" layoutY="149.0" pickOnBounds="true" preserveRatio="true">
+                <ImageView fx:id="browseButton" fitHeight="25.0" fitWidth="25.0" layoutX="366.0" layoutY="162.0" pickOnBounds="true" preserveRatio="true">
                     <image>
                         <Image url="@picture/search.png" />
                     </image>
@@ -48,22 +54,28 @@
                         <Cursor fx:constant="HAND" />
                     </cursor>
                 </ImageView>
-            <ImageView fitHeight="145.0" fitWidth="150.0" layoutX="225.0" layoutY="76.0">
+                <Button fx:id="extractButton" layoutX="32.0" layoutY="80.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="88.0" text="Extract" />
+                <Label layoutX="239.0" layoutY="14.0" prefHeight="17.0" prefWidth="88.0" text="Drop file Upper:" />
+                <TextField fx:id="nameField" layoutX="209.0" layoutY="36.0" promptText="File Name" />
+                <TextField fx:id="locationField" editable="false" layoutX="209.0" layoutY="162.0" promptText="File Location" />
+                <CheckBox fx:id="pass_toggle" layoutX="209.0" layoutY="135.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="114.0" text="Show Password" textFill="#fcfcfc" />
+                <TextField fx:id="passwordField" layoutX="209.0" layoutY="98.0" promptText="File Password" />
+                <PasswordField fx:id="passwordHidden" layoutX="208.0" layoutY="98.0" promptText="File Password" />
+                <CheckBox fx:id="setPasswordButton" layoutX="209.0" layoutY="67.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="96.0" text="Set Password" textFill="#fffdfd" />
+                <Button fx:id="deleteButton" layoutX="506.0" layoutY="146.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="79.0" text="Delete" />
+                <Button fx:id="searchButton" layoutX="32.0" layoutY="27.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="88.0" text="Search">
+               <font>
+                  <Font size="10.0" />
+               </font></Button>
+                <Button fx:id="startButton" layoutX="31.0" layoutY="137.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="88.0" text="Archive">
+               <font>
+                  <Font size="6.0" />
+               </font></Button>
+            <ImageView fitHeight="125.0" fitWidth="123.0" layoutX="479.0" layoutY="62.0">
                <image>
                   <Image url="@picture/Dino04.PNG" />
                </image>
             </ImageView>
-                <Button fx:id="startButton" layoutX="41.0" layoutY="31.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="96.0" text="Archive" />
-                <Button fx:id="deleteButton" layoutX="49.0" layoutY="136.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="79.0" text="Delete" />
-                <Button fx:id="extractButton" layoutX="135.0" layoutY="136.0" mnemonicParsing="false" text="Extract" />
-                <Button fx:id="searchButton" layoutX="49.0" layoutY="84.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="80.0" text="Search" />
-                <Label layoutX="239.0" layoutY="14.0" prefHeight="17.0" prefWidth="88.0" text="Drop file Upper:" />
-                <TextField fx:id="nameField" layoutX="384.0" layoutY="23.0" promptText="File Name" />
-                <TextField fx:id="locationField" editable="false" layoutX="384.0" layoutY="149.0" promptText="File Location" />
-                <CheckBox fx:id="pass_toggle" layoutX="384.0" layoutY="122.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="114.0" text="Show Password" textFill="#fcfcfc" />
-                <TextField fx:id="passwordField" layoutX="384.0" layoutY="86.0" promptText="File Password" />
-                <PasswordField fx:id="passwordHidden" layoutX="384.0" layoutY="86.0" promptText="File Password" />
-                <CheckBox fx:id="setPasswordButton" layoutX="384.0" layoutY="54.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="96.0" text="Set Password" textFill="#fffdfd" />
             </children>
         </AnchorPane>
     </items>
